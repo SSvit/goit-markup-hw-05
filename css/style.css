@@ -197,7 +197,9 @@ img {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    gap: 50px;
+    
+    /* gap: 50px; */
+    
     /* flex-direction: ; */
     
     font-weight: 500;
@@ -208,6 +210,10 @@ img {
 
 .link-search {
      color: var(--title-text-color);
+}
+
+.search {
+    margin-right: 50px;
 }
 
 .header-icon {
@@ -271,6 +277,9 @@ img {
 .btn {
     padding: 10px 32px;
     display: inline-flex;
+   
+   /* було в 4 дз */
+    /* display: inline-block; */
     align-items: center;
     text-align: center;
 
@@ -515,6 +524,14 @@ img {
     transition: background-color 250ms linear;
 }
 
+.userpic-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .userpic-icon {
     fill: #AFB1B8;
 }
@@ -545,7 +562,7 @@ img {
 /* Сукція 5 */
 .page-coworker {
     padding-top: 94px;
-    padding-bottom: 50px;
+    padding-bottom: 94px;
 }
 
 .pic {
@@ -590,6 +607,11 @@ img {
     fill: var(--accent-hover-color);
 }
 
+.pic-item:hover,
+.pic-item:focus {
+    border-color: var(--accent-hover-color);
+}
+
 /* .pic-icon-item:hover,
 .pic-icon-item:focus {
     fill: var(--accent-hover-color);
@@ -607,7 +629,7 @@ img {
 }
 
 .title {
-transition: color 250ms linear;
+    transition: color 250ms linear;
 }
 
 /* Загальний контейнер футер */
@@ -670,13 +692,18 @@ transition: color 250ms linear;
 .footer-flex {
     justify-content: center;
     align-items: baseline;
+    margin-right: 70px;
+}
+
+.footer-flex:last-child {
+    margin-right: 0;
 }
 
 .footer-soc {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -686,8 +713,7 @@ transition: color 250ms linear;
 }
 
 .footer-soc-list {
-    margin-left: 70px;
-    margin-top: 0;
+    margin: 0;
     padding-left: 0;
     display: flex;
     justify-content: center;
@@ -715,6 +741,14 @@ transition: color 250ms linear;
 .footer-soc-item:focus {
     background-color: var(--accent-hover-color);
 } */
+.footer-hover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .footer-soc-item:hover,
 .footer-hover:focus {
@@ -735,7 +769,6 @@ transition: color 250ms linear;
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 
-    font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -765,6 +798,7 @@ transition: color 250ms linear;
 .button .btn-primary:focus{
     background-color: var(--accent-hover-color);
     color: var(--primary-white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Другий список з зображеннями */
@@ -774,8 +808,12 @@ transition: color 250ms linear;
 }
 
 .link {
+    display: flex;
+    text-decoration: none;
+}
+
+.link-box {
     display: block;
-    font-style: normal;
     text-decoration: none;
 }
 
@@ -816,36 +854,49 @@ transition: color 250ms linear;
 } */
 .product-thumb {
     position: relative;
-    display: flex;
+    /* display: flex; */
 
     outline: 5px solid palevioletred;
 }
 
-.product-box {
+.product-thumb::before {
+    display: inline-block;
     position: absolute;
+    content: "";
+    /* top: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
     /* left: 215px; */
-    bottom: 0;
+    /* bottom: 0; */
     /* width: 370px;
         height: 294px;
         left: 215px;
         top: 260px; */
-    background: rgba(33, 150, 243, 0.9);
+    background-color: rgba(33, 150, 243, 0.9);
+
 }
 
+.product-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */    
+}
 
 .product-box .actions-text {
-    /* position: absolute; */
-    /* bottom: 0;
-   right: 0; */
-    align-items: center;
-    padding: 63px 24px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    /* line-height: 1.56px; */
+    /* width: 100%;
+    height: 100%; */
+    /* padding: 0; */
+    width: 322px;
+        height: 168px;
+        /* font-style: normal;
+        font-weight: 400; */
+        font-size: 18px;
+        /* line-height: 1.56px; */
     letter-spacing: 0.03em;
     
     color: #FFFFFF;
@@ -853,7 +904,9 @@ transition: color 250ms linear;
 
 
 
+
 .portfolio-team-box {
+    width: 100%;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: 0;
