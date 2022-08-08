@@ -95,8 +95,8 @@ img {
     letter-spacing: 0.03em;
     text-decoration: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
 
 /* Логотип -Web- */
 .logo-black {
@@ -119,7 +119,9 @@ img {
 .footer-logo:focus,
 .logo-white:hover,
 .logo-white:focus {
-    color: var(--accent-hover-color);
+    color: var(--accent-hover-color);   
+
+    transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Хедер Site nav */
@@ -148,8 +150,11 @@ img {
     text-decoration: none; 
 }
 
-.link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.link {    
+    display: flex;
+    text-decoration: none;
+    transition-duration: 1500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Добавляє ховер i фокус в хедерi */
 .site-nav .link:hover,
@@ -524,9 +529,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .userpic-link {
@@ -535,6 +539,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+
+    transition-property: background-color, fill; 
 }
 
 .userpic-icon {
@@ -555,9 +562,9 @@ img {
     background-color: var(--accent-hover-color);
 }
 
-.userpic-icon {
+/* .userpic-icon {
     transition: color 250ms linear;
-}
+} */
 
 .userpic-link:hover .userpic-icon,
 .userpic-link:focus .userpic-icon {
@@ -580,7 +587,7 @@ img {
     /* padding: 16px 32px; */
     margin-left: 30px;
 
-    transition: fill 550ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: fill 550ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .pic-icon:first-child {
@@ -596,16 +603,18 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
+
+    transition-property: color border-color;
 }
 
 /* .pic-icon-item {
     fill: currentColor;
 } */
 
-.pic-item .pic-icon-item,
+/* .pic-item .pic-icon-item,
 .pic-item .pic-icon-item {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .pic-item:hover .pic-icon-item,
 .pic-item:focus .pic-icon-item {
@@ -735,7 +744,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .soc-item {
@@ -753,8 +762,9 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-}
 
+    transition-property: background-color;
+}
 
 .footer-soc-item:hover,
 .footer-hover:focus {
@@ -811,11 +821,6 @@ img {
 .about-works {
     /* margin: -15px; */
     flex-wrap: wrap;
-}
-
-.link {
-    display: flex;
-    text-decoration: none;
 }
 
 .link-box {
@@ -929,7 +934,7 @@ img {
     color: #FFFFFF;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     overflow: auto;
 }
 
