@@ -95,15 +95,15 @@ img {
     line-height: 1.2;    
     letter-spacing: 0.03em;
     text-decoration: none;   
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 /* Логотип -Studio- */
 .logo-black {
     color: var(--accent-black-color);
 
-    transition-property: color;
-    transition-duration: 1500ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .nav-section {
@@ -303,7 +303,7 @@ img {
     border-radius: 4px;
     border: 0;
 
-    transition-property: background-color;
+    transition-property: color, background-color;
 }
 
 .page-section {
@@ -442,7 +442,7 @@ img {
 .product-actions {
     position: absolute;
     width: 100%;
-    height: 70px;
+    /* height: 70px; */
 
     background: rgba(47, 48, 58, 0.8);
     /* left: 215px; */
@@ -453,10 +453,11 @@ img {
    /* position: absolute; */
    /* bottom: 0;
    right: 0; */
+    display: flex;    
+    justify-content: center;
     align-items: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    
+    height: 70px;
+       
     color: #FFFFFF;
 
     font-style: normal;
@@ -654,6 +655,8 @@ img {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-white {
@@ -779,7 +782,7 @@ img {
     border-radius: 4px;
     border: 0;
     /* transition-property: color; */
-    transition-property: color background-color;
+    transition-property: color, background-color, box-shadow;
 }
 
 .button-item:not(:last-child) {
@@ -810,6 +813,7 @@ img {
 .link-box {
     display: block;
     text-decoration: none;
+    transition-property: box-shadow;
 }
 
 .about-works .item {
@@ -913,7 +917,7 @@ img {
     
     color: #FFFFFF;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+    transform: translateY(101%);
     /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     overflow: auto;
 }
