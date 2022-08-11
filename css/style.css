@@ -153,7 +153,7 @@ img {
 .link {    
     display: flex;
     text-decoration: none;
-    transition-duration: 250ms;
+    transition-duration: 1250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Добавляє ховер i фокус в хедерi */
@@ -922,7 +922,6 @@ img {
     overflow: auto;
 }
 
-
 .portfolio-team-box {
     width: 100%;
     padding: 20px 24px;
@@ -946,17 +945,12 @@ img {
     background: var(--background-darker-than-white);
 }
 /* Фон для секції 1  */
-.bg {
-    /* margin: auto; */
-    /* width: 1600px; */
+.bg {   
     background-color: var(--background-very-gray);
 }
 /* Фон для футера */
 .footer {
-    background: var(--background-very-gray);
-    /* padding: 60px 0; */
-    /* margin: auto; */
-    /* width: 1600px; */
+    background: var(--background-very-gray);  
 }
 
 /* Модальне вiкно */
@@ -967,11 +961,10 @@ img {
     width: 100vw;
     /* height: 100vh; */
     background: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop .is-hidden .modal {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .modal {
@@ -987,8 +980,9 @@ img {
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transform: translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(1);
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    /* transition-property: background-color; */
 }
 
 .button-modal-close {
@@ -1005,12 +999,15 @@ img {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    transition-property: background-color;
 }
-/* .modal-close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
+.button-modal-close:hover, 
+.button-modal-close:focus {
+    background-color: var(--accent-hover-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .is-hidden {
     opacity: 0;
