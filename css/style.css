@@ -153,7 +153,7 @@ img {
 .link {    
     display: flex;
     text-decoration: none;
-    transition-duration: 250ms;
+    transition-duration: 2250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Добавляє ховер i фокус в хедерi */
@@ -525,7 +525,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: fill;
 }
 
 .userpic-link {
@@ -536,7 +535,9 @@ img {
     justify-content: center;
     border-radius: 50%;
     fill: #AFB1B8;
-    /* transition-property: background-color;  */
+
+    transition-property: fill;
+    transition-property: background-color; 
 }
 
 /* .userpic-icon {
@@ -561,10 +562,10 @@ img {
     background-color: var(--accent-hover-color);
 }
 
-.userpic-link:hover .userpic-icon,
+/* .userpic-link:hover .userpic-icon,
 .userpic-link:focus .userpic-icon {
     fill: var(--primary-white-color);
-}
+}  */
 
 /*----------------- Сукція 5 ------------------*/
 .page-coworker {
