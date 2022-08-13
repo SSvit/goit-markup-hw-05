@@ -888,9 +888,11 @@ img {
 /* .section-image-item:hover .product-thumb {
     transform: translateY(0);
 } */
-.li-thumb:hover .product-text {
+.li-thumb:hover .product-text,
+.li-thumb:focus .product-text {
     transform: translateY(0%);
 }
+
 .product-thumb {
     position: relative;
     overflow: hidden;
